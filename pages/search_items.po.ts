@@ -1,13 +1,11 @@
-import { Selector } from 'testcafe';
-
-export class SearchItemsPO {
-    searchInput:Selector = Selector('.nav #search-input');
-    searchIcon:Selector = Selector('.nav #search-icon');
-    firstItem:Selector = Selector('#page-content .grid div.item-1') 
-    warningMessage:Selector = Selector('#warning-message') 
+export class SearchItemsPO {    
+    foundItemsList:string = '#page-content .result-grid';
+    firstItemFound:string = `${this.foundItemsList} div.item-1`;
+    itemTitleSelector:string = '#page-content .item-title';
 
     itemData = {
-        googlePixel: 'Google Pixel 8a 8GB/128GB Aloe'
+        googlePixel: 'Google Pixel 8a 8GB/128GB Aloe',
+        invalidItem: 'Absolutely existing smartphone'
     };
 
     messageData = {
