@@ -1,0 +1,7 @@
+{
+    "name": "my_package",
+    "version": "0.0.0",
+    "dependencies": {
+      "testcafe": "^3.6.0"
+    }
+}
