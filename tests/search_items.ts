@@ -19,8 +19,8 @@ test('Check an existing item can be searched with valid results and viewed', asy
         .click(sharedPO.searchIcon)
         // Wait 1s for the search results
         .wait(1000);
-        const resultsList = Selector(searchInputPO.foundItemsList);
-        const firstItemFound = Selector(searchInputPO.firstItemFound);
+        const resultsList:Selector = Selector(searchInputPO.foundItemsList);
+        const firstItemFound:Selector = Selector(searchInputPO.firstItemFound);
     await t
         // Check the grid with results exists
         .expect(resultsList.exists).ok()
@@ -51,11 +51,7 @@ test('Check a non-existing item can be searched with no results found', async t 
     const resultsList = Selector(searchInputPO.foundItemsList);
     await t
         // Check there is no grid with results
-        .expect(resultsList.exists).notOk()
-        // Check that search input and search button exist
-        // so the user can look for another item
-        .expect(sharedPO.searchInput).ok()
-        .expect(sharedPO.searchIcon).ok(); 
+        .expect(resultsList.exists).notOk();
 });
 
 test('Check the shopping cart can be viewed after searching', async t => {

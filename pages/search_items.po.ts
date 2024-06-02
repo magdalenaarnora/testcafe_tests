@@ -7,8 +7,4 @@ export class SearchItemsPO {
         googlePixel: 'Google Pixel 8a 8GB/128GB Aloe',
         invalidItem: 'Absolutely existing smartphone'
     };
-
-    messageData = {
-        unsuccessfulSearch: 'Item not found.'
-    };
 }
